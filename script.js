@@ -57,12 +57,21 @@ function playRound(playerSelection, computerSelection) {
 }
 
 // function that loops through a round based on the parameter entered
-function game(rounds) {}
+function game(rounds) {
+  // the values of the computer and player choices are initialized with an empty string
+  let computerChoice = "";
+  let playerChoice = "";
 
-let computerChoice = computerSelection();
-console.log(computerChoice);
+  // loops based on the number of rounds entered as a parameter
+  for (let currentRound = 0; currentRound < rounds; currentRound++) {
+    //values for the user and computer choices are assigned
+    computerChoice = computerSelection();
+    playerChoice = playerSelection();
 
-let playerChoice = playerSelection();
+    let result = playRound(playerChoice, computerChoice); // stores the result into a string
+    console.log(result); // prints the result to the console.
+  }
+}
 
 let result = playRound(playerChoice, computerChoice); // stores the result of the round
 console.log(result);
