@@ -12,15 +12,16 @@ function computerSelection() {
 // function that takes user input to make a choice
 function playerSelection() {
   // takes in user input an converts it to a number
-  let option = Number(
-    prompt(
-      "Please enter a number to make your choice: 1. rock  2. paper  3. scissors"
-    )
-  );
-  console.log(option);
-  console.log(typeof option);
-  console.log(choices[option - 1]);
-  return choices[option - 1];
+  let option = prompt(
+    "Please enter one of the following: 1. rock  2. paper  3. scissors"
+  ).toLowerCase();
+
+  while (!choices.includes(option)) {
+    option = prompt(
+      "Invalid input. Please enter one of the following: 1. rock  2. paper  3. scissors"
+    ).toLowerCase();
+  }
+  return option;
 }
 
 // function that takes in the player and computer choices and returns a result
