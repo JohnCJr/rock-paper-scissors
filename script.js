@@ -29,28 +29,28 @@ function playRound(playerSelection, computerSelection) {
   let result = ""; // stores the result of the round
 
   if (playerSelection === "rock") {
-    if (computerChoice === "paper") {
+    if (computerSelection === "paper") {
       result = "You lose. Paper beats Rock.";
-    } else if (computerChoice === "scissors") {
+    } else if (computerSelection === "scissors") {
       result = "You win! Rock beats Scissors.";
     } else {
-      result = "it's a draw.";
+      result = "It's a draw.";
     }
   } else if (playerSelection === "paper") {
-    if (computerChoice === "rock") {
+    if (computerSelection === "rock") {
       result = "You win! Paper beats Rock.";
-    } else if (computerChoice === "scissors") {
+    } else if (computerSelection === "scissors") {
       result = "You lose. Scissors beats Paper.";
     } else {
-      result = "it's a draw.";
+      result = "It's a draw.";
     }
   } else {
-    if (computerChoice === "rock") {
+    if (computerSelection === "rock") {
       result = "You lose. Rock beats Scissors.";
-    } else if (computerChoice === "paper") {
+    } else if (computerSelection === "paper") {
       result = "You win! Scissors beats Paper.";
     } else {
-      result = "it's a draw.";
+      result = "It's a draw.";
     }
   }
   return result;
@@ -61,6 +61,7 @@ function game(rounds) {
   // the values of the computer and player choices are initialized with an empty string
   let computerChoice = "";
   let playerChoice = "";
+  let result = "";
 
   // loops based on the number of rounds entered as a parameter
   for (let currentRound = 0; currentRound < rounds; currentRound++) {
@@ -68,10 +69,9 @@ function game(rounds) {
     computerChoice = computerSelection();
     playerChoice = playerSelection();
 
-    let result = playRound(playerChoice, computerChoice); // stores the result into a string
+    result = playRound(playerChoice, computerChoice); // stores the result of a round
     console.log(result); // prints the result to the console.
   }
 }
 
-let result = playRound(playerChoice, computerChoice); // stores the result of the round
-console.log(result);
+game(5);
