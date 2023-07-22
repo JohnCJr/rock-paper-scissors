@@ -34,7 +34,7 @@ function playRound(playerSelection, computerSelection) {
     } else if (computerSelection === "scissors") {
       result = "You win! Rock beats Scissors.";
     } else {
-      result = "It's a draw.";
+      result = "It's a draw between Rock and Rock.";
     }
   } else if (playerSelection === "paper") {
     if (computerSelection === "rock") {
@@ -42,7 +42,7 @@ function playRound(playerSelection, computerSelection) {
     } else if (computerSelection === "scissors") {
       result = "You lose. Scissors beats Paper.";
     } else {
-      result = "It's a draw.";
+      result = "It's a draw between Paper and Paper.";
     }
   } else {
     if (computerSelection === "rock") {
@@ -50,7 +50,7 @@ function playRound(playerSelection, computerSelection) {
     } else if (computerSelection === "paper") {
       result = "You win! Scissors beats Paper.";
     } else {
-      result = "It's a draw.";
+      result = "It's a draw between Scissors and Scissors.";
     }
   }
   return result;
@@ -74,4 +74,5 @@ function game(rounds) {
   }
 }
 
+// runs the rock, paper, scissors game with 5 rounds
 game(5);
