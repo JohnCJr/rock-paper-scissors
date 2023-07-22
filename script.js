@@ -11,6 +11,7 @@ function computerSelection() {
 
 // function that takes user input to make a choice
 function playerSelection() {
+  // takes in user input an converts it to a number
   let option = Number(
     prompt(
       "Please enter a number to make your choice: 1. rock  2. paper  3. scissors"
@@ -23,7 +24,35 @@ function playerSelection() {
 }
 
 // function that takes in the player and computer choices and returns a result
-function playRound(playerSelection, computerSelection) {}
+function playRound(playerSelection, computerSelection) {
+  let result = ""; // stores the result of the round
+
+  if (playerSelection === "rock") {
+    if (computerChoice === "paper") {
+      result = "You lose. Paper beats Rock.";
+    } else if (computerChoice === "scissors") {
+      result = "You win! Rock beats Scissors.";
+    } else {
+      result = "it's a draw.";
+    }
+  } else if (playerSelection === "paper") {
+    if (computerChoice === "rock") {
+      result = "You win! Paper beats Rock.";
+    } else if (computerChoice === "scissors") {
+      result = "You lose. Scissors beats Paper.";
+    } else {
+      result = "it's a draw.";
+    }
+  } else {
+    if (computerChoice === "rock") {
+      result = "You lose. Rock beats Scissors.";
+    } else if (computerChoice === "paper") {
+      result = "You win! Scissors beats Paper.";
+    } else {
+      result = "it's a draw.";
+    }
+  }
+}
 
 // function that loops through a round based on the parameter entered
 function game(rounds) {}
