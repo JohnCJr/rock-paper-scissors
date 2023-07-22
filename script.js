@@ -10,7 +10,17 @@ function computerSelection() {
 }
 
 // function that takes user input to make a choice
-function playerSelection() {}
+function playerSelection() {
+  let option = Number(
+    prompt(
+      "Please enter a number to make your choice: 1. rock  2. paper  3. scissors"
+    )
+  );
+  console.log(option);
+  console.log(typeof option);
+  console.log(choices[option - 1]);
+  return choices[option - 1];
+}
 
 // function that takes in the player and computer choices and returns a result
 function playRound(playerSelection, computerSelection) {}
@@ -20,3 +30,5 @@ function game(rounds) {}
 
 let computerChoice = computerSelection();
 console.log(computerChoice);
+
+let playerChoice = playerSelection();
