@@ -52,6 +52,7 @@ function playRound(playerSelection, computerSelection) {
       result = "it's a draw.";
     }
   }
+  return result;
 }
 
 // function that loops through a round based on the parameter entered
@@ -61,3 +62,6 @@ let computerChoice = computerSelection();
 console.log(computerChoice);
 
 let playerChoice = playerSelection();
+
+let result = playRound(playerChoice, computerChoice); // stores the result of the round
+console.log(result);
