@@ -6,7 +6,7 @@ let choices = ["rock", "paper", "scissors"];
 
 // function that gets computer choice of either Rock, Paper, or Scissors
 function computerSelection() {
-  return choices[Math.floor(Math.random() * 3)];
+  return choices[Math.floor(Math.random() * 3)]; // will return a random number between 0 and 2
 }
 
 // function that takes user input to make a choice
@@ -17,3 +17,6 @@ function playRound(playerSelection, computerSelection) {}
 
 // function that loops through a round based on the parameter entered
 function game(rounds) {}
+
+let computerChoice = computerSelection();
+console.log(computerChoice);
