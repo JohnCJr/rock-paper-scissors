@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  /*used cto created diagonal gradient*/
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(0%, #c9de96),
+    color-stop(30%, #8ab66b),
+    color-stop(100%, #398235)
+  );
+}
+
+h1 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin-top: 0;
+}
