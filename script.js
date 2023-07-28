@@ -57,22 +57,34 @@ function playRound(playerSelection, computerSelection) {
 }
 
 // function that loops through a round based on the parameter entered
-function game(rounds) {
-  // the values of the computer and player choices are initialized with an empty string
-  let computerChoice = "";
-  let playerChoice = "";
-  let result = "";
+// function game(rounds) {
+//   // the values of the computer and player choices are initialized with an empty string
+//   let computerChoice = "";
+//   let playerChoice = "";
+//   let result = "";
 
-  // loops based on the number of rounds entered as a parameter
-  for (let currentRound = 0; currentRound < rounds; currentRound++) {
-    //values for the user and computer choices are assigned
-    computerChoice = computerSelection();
-    playerChoice = playerSelection();
+//   // loops based on the number of rounds entered as a parameter
+//   for (let currentRound = 0; currentRound < rounds; currentRound++) {
+//     //values for the user and computer choices are assigned
+//     computerChoice = computerSelection();
+//     playerChoice = playerSelection();
 
-    result = playRound(playerChoice, computerChoice); // stores the result of a round
-    console.log(result); // prints the result to the console.
-  }
-}
+//     result = playRound(playerChoice, computerChoice); // stores the result of a round
+//     console.log(result); // prints the result to the console.
+//   }
+// }
 
-// runs the rock, paper, scissors game with 5 rounds
-game(5);
+// // runs the rock, paper, scissors game with 5 rounds
+// game(5);
+
+const buttons = document.querySelectorAll("button");
+const resultDisplay = document.querySelector(".resultBox");
+
+// console.log(buttons);
+
+buttons.forEach((button) =>
+  button.addEventListener("click", () => {
+    // console.log(button.value);
+    console.log(playRound(button.value, computerSelection()));
+  })
+);
