@@ -79,12 +79,15 @@ function playRound(playerSelection, computerSelection) {
 
 const buttons = document.querySelectorAll("button");
 const resultDisplay = document.querySelector(".resultBox");
+const roundResult = document.createElement("p");
 
 // console.log(buttons);
 
 buttons.forEach((button) =>
   button.addEventListener("click", () => {
     // console.log(button.value);
-    console.log(playRound(button.value, computerSelection()));
+    roundResult.textContent = playRound(button.value, computerSelection());
+
+    resultDisplay.appendChild(roundResult);
   })
 );
