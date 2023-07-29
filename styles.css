@@ -1,7 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  /*used cto created diagonal gradient*/
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /*used to created diagonal gradient*/
   background: -webkit-gradient(
     linear,
     left top,
@@ -19,4 +22,10 @@ h1 {
   align-items: center;
   padding: 30px;
   margin-top: 0;
+}
+
+.options {
+  display: flex;
+  width: 800px;
+  justify-content: space-around;
 }
