@@ -62,29 +62,9 @@ function playRound(playerSelection, computerSelection) {
     }
   }
   updateScore(winScore, lossScore);
+  addResultStyle(result);
   return result;
 }
-
-// function that loops through a round based on the parameter entered
-// function game(rounds) {
-//   // the values of the computer and player choices are initialized with an empty string
-//   let computerChoice = "";
-//   let playerChoice = "";
-//   let result = "";
-
-//   // loops based on the number of rounds entered as a parameter
-//   for (let currentRound = 0; currentRound < rounds; currentRound++) {
-//     //values for the user and computer choices are assigned
-//     computerChoice = computerSelection();
-//     playerChoice = playerSelection();
-
-//     result = playRound(playerChoice, computerChoice); // stores the result of a round
-//     console.log(result); // prints the result to the console.
-//   }
-// }
-
-// // runs the rock, paper, scissors game with 5 rounds
-// game(5);
 
 const buttons = document.querySelectorAll("button");
 const resultDisplay = document.querySelector(".resultBox");
@@ -92,11 +72,16 @@ const roundResult = document.createElement("p");
 const winDisplay = document.querySelector(".winScore");
 const lossDisplay = document.querySelector(".lossScore");
 
-// console.log(buttons);
-
-// function addResultStyle(style) {
-//   resultDisplay.classList.add(`.${style}`);
-// }
+// adds/removes style for resultBox div based on the outcome of the round
+function addResultStyle(result) {
+  if (result.includes("win")) {
+    resultDisplay.classList.add("win");
+  } else if (result.includes("lose")) {
+    resultDisplay.classList.add("lose");
+  } else {
+    resultDisplay.classList.remove("win", "lose");
+  }
+}
 
 function updateScore(winScore, lossScore) {
   winDisplay.textContent = winScore;
