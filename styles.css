@@ -67,3 +67,10 @@ span {
   padding: 10px 20px;
   margin-top: 40px;
 }
+
+.resultBox {
+  font-size: large;
+  font-weight: 500;
+  font-style: oblique;
+  margin-top: 30px;
+}
