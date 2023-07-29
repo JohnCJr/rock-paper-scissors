@@ -74,12 +74,13 @@ const lossDisplay = document.querySelector(".lossScore");
 
 // adds/removes style for resultBox div based on the outcome of the round
 function addResultStyle(result) {
+  // resets the class style before any class is added
+  resultDisplay.classList.remove("win", "lose");
+
   if (result.includes("win")) {
     resultDisplay.classList.add("win");
   } else if (result.includes("lose")) {
     resultDisplay.classList.add("lose");
-  } else {
-    resultDisplay.classList.remove("win", "lose");
   }
 }
 
