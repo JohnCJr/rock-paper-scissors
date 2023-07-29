@@ -1,18 +1,11 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 4em 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  /*used to created diagonal gradient*/
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right bottom,
-    color-stop(0%, #c9de96),
-    color-stop(30%, #8ab66b),
-    color-stop(100%, #398235)
-  );
+  background: #8ab66b;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
