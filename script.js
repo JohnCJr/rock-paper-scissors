@@ -1,8 +1,6 @@
 "use strict";
-// As of this moment, the game will take place exclusively within the console
 
-// array that stores the possible choice either player can make
-let choices = ["rock", "paper", "scissors"];
+let choices = ["rock", "paper", "scissors"]; // array that stores the possible choices the computer can make
 let winScore = 0;
 let lossScore = 0;
 
@@ -11,22 +9,8 @@ function computerSelection() {
   return choices[Math.floor(Math.random() * 3)]; // will return a random number between 0 and 2
 }
 
-// function that takes user input to make a choice
-function playerSelection() {
-  // takes in user input an converts it to a number
-  let option = prompt(
-    "Please enter one of the following: 1. rock  2. paper  3. scissors"
-  ).toLowerCase();
-
-  while (!choices.includes(option)) {
-    option = prompt(
-      "Invalid input. Please enter one of the following: 1. rock  2. paper  3. scissors"
-    ).toLowerCase();
-  }
-  return option;
-}
-
-// function that takes in the player and computer choices and returns a result
+// function that takes in the player and computer choices and returns a result,
+// updates the score, and updates the color of the text displaying the result on the page
 function playRound(playerSelection, computerSelection) {
   let result = ""; // stores the result of the round
 
@@ -72,7 +56,7 @@ const roundResult = document.createElement("p");
 const winDisplay = document.querySelector(".winScore");
 const lossDisplay = document.querySelector(".lossScore");
 
-// adds/removes style for resultBox div based on the outcome of the round
+// adds/removes style for resultBox div based on the text within result
 function addResultStyle(result) {
   // resets the class style before any class is added
   resultDisplay.classList.remove("win", "lose");
@@ -84,16 +68,18 @@ function addResultStyle(result) {
   }
 }
 
+// updates the text containing the score to the current score
 function updateScore(winScore, lossScore) {
   winDisplay.textContent = winScore;
   lossDisplay.textContent = lossScore;
 }
 
+// adds event listener for each button that will play a round with the user's choice
 buttons.forEach((button) =>
   button.addEventListener("click", () => {
-    // console.log(button.value);
     roundResult.textContent = playRound(button.value, computerSelection());
 
+    // appends new <p> tag with result inside the div with the resultBox class
     resultDisplay.appendChild(roundResult);
   })
 );
