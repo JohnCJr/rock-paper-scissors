@@ -30,6 +30,7 @@ h1 {
   justify-content: space-around;
 }
 
+/****************************button styles*******************************/
 button {
   font-size: 1.1rem;
   padding: 10px 25px;
@@ -37,3 +38,13 @@ button {
   border-radius: 5px;
   background-color: aqua;
 }
+
+button:hover {
+  background-color: lightgreen;
+}
+
+button:active {
+  background-color: rgb(107, 191, 107);
+}
+
+/********************************************************************/
