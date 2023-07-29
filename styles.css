@@ -13,6 +13,7 @@ body {
     color-stop(30%, #8ab66b),
     color-stop(100%, #398235)
   );
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1 {
